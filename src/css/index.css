@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 16px;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  padding-top: 3rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+.flex-r {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+}
+
+.reset {
+  top: 14rem;
+  background-color: rgb(190, 188, 188);
+}
+
+.random {
+  top: 10rem;
+  background-color: rgb(71, 226, 131);
+}
+
+.reset,
+.random {
+  position: fixed;
+  right: 0;
+  width: 5.5rem;
+  height: 3.3rem;
+  margin-right: -2rem;
+  border-radius: 1.3rem 0 0 1.1rem;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: auto;
+  padding-left: 1.5rem;
+  font-size: 1.4rem;
+  color: white;
+  transition: 0.2s ease-in;
+  box-shadow: 0 0 8px 2px rgba(139, 137, 137, 0.3);
+}
+.reset:hover,
+.random:hover {
+  transform: translateX(-1rem);
+}
+.reset i:hover,
+.random i:hover {
+  transform: scale(1.1);
+}
+.reset i:active,
+.random i:active {
+  transform: scale(0.85);
+}
+
+#root {
+  width: 100%;
+}
+#root .App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.moods {
+  gap: 1.5rem;
+}
+.moods .mood {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: auto;
+  font-size: 2rem;
+  transition: 0.3s ease-in;
+}
+.moods .mood:hover {
+  transform: translateY(0.1rem);
+}
+.moods .mood:active {
+  transform: scale(0.85);
+}
+.moods .selected {
+  background-color: currentColor;
+}
+.moods .selected i {
+  color: white;
+}
+.moods .m-1 {
+  color: rgb(241, 126, 25);
+}
+.moods .m-2 {
+  color: rgb(240, 196, 18);
+}
+.moods .m-3 {
+  color: rgb(77, 194, 164);
+}
+.moods .m-4 {
+  color: rgb(42, 106, 42);
+}
+.moods .m-5 {
+  color: rgb(28, 72, 176);
+}
+
+.Calendar {
+  width: 70%;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 2rem 0 3rem;
+}
+.Calendar .month {
+  width: 100%;
+  gap: 0.4rem;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.Calendar .month .weekdays {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.Calendar .month .weekdays .weekday {
+  justify-self: center;
+  width: 2rem;
+}
+.Calendar .month .days {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 0.6rem;
+}
+.Calendar .month .days .day {
+  justify-self: center;
+  border-radius: 50%;
+  margin: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  background-color: rgb(155, 155, 155);
+  transition: 0.15s ease-in;
+}
+.Calendar .month .days .day:hover {
+  transform: scale(1.1);
+}
+.Calendar .month .days .day:active {
+  transform: scale(0.85);
+}
+
+@media (max-width: 1200px) {
+  .Calendar {
+    width: 65%;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 15px;
+  }
+  .Calendar {
+    width: 85%;
+  }
+}
+@media (max-width: 670px) {
+  html {
+    font-size: 14px;
+  }
+  .Calendar {
+    margin-top: 1.5rem;
+    width: 83%;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=index.css.map */
